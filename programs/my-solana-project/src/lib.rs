@@ -9,7 +9,7 @@ pub use constants::*;
 pub use instructions::*;
 pub use state::*;
 
-declare_id!("BTiPV5EVcjvWSgRAwkp819fV3DHjxMP31deaSvzZmCYY");
+declare_id!("JDaFRNRx4bZZWdGTXvQjexsPhYqyHDBNpFuYRQuMDhp9");
 
 #[program]
 pub mod my_solana_project {
@@ -19,7 +19,11 @@ pub mod my_solana_project {
         crate::instructions::initialize::handle_initialize(ctx)
     }
 
-    pub fn increment(ctx: Context<Increment>) -> Result<()> {
-        crate::instructions::increment::handle_increment(ctx)
+    pub fn mint_token(
+        ctx: Context<MintToken>,
+        amount: u64,
+        decimals: u8,
+    ) -> Result<()> {
+        crate::instructions::mint_token::handle_mint_token(ctx, amount, decimals)
     }
 }

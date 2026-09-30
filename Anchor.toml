@@ -6,8 +6,11 @@ skip_local_validator = true
 resolution = true
 skip-lint = false
 
-[programs.localnet]
+[programs.devnet]
 my_solana_project = "BTiPV5EVcjvWSgRAwkp819fV3DHjxMP31deaSvzZmCYY"
+
+[programs.localnet]
+my_solana_project = "JDaFRNRx4bZZWdGTXvQjexsPhYqyHDBNpFuYRQuMDhp9"
 
 [provider]
 cluster = "localnet"

@@ -1,5 +1,5 @@
 pub mod initialize;
-pub mod increment;
+pub mod mint_token;
 
 pub use initialize::*;
-pub use increment::*;
+pub use mint_token::*;
